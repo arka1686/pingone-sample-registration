@@ -26,7 +26,7 @@
     <dependency>
       <groupId>com.pingidentity.samples</groupId>
       <artifactId>spring-boot-sdk</artifactId>
-      <version>${project.version}</version>
+      <version>0.0.7-SNAPSHOT</version>
     </dependency>
 
     <dependency>
@@ -54,7 +54,7 @@
   <repositories>
     <repository>
       <id>github</id>
-      <url>https://raw.github.com/pingidentity/pingone-customers-spring-boot-tools/mvn-repo/</url>
+      <url>https://raw.github.com/arka1686/pingone-customers-spring-boot-tools/mvn-repo/</url>
       <snapshots>
         <enabled>true</enabled>
         <updatePolicy>always</updatePolicy>
