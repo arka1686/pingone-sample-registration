@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>PingOne for Customers User Registration Sample</title>
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+  <h2>PingOne for Customers User Registration Sample</h2>
+
+  <div th:replace="general :: sign-in-container"></div>
+
+  <div th:unless="${#authorization?.expression('isAuthenticated()')}">
+    <br>
+    <button onclick="location.href='password/forgot'" type="button">
+      Forgot Password
+    </button>
+  </div>
+
+  <div th:unless="${#authorization?.expression('isAuthenticated()')}">
+    <br>
+    <button onclick="location.href='/register'" type="button">
+      Register New User
+    </button>
+  </div>
+
+  <div th:if="${#authorization?.expression('isAuthenticated()')}">
+    <br>
+    <button onclick="location.href='password/change'" type="button">
+      Change Password
+    </button>
+  </div>
+</div>
+</body>
+</html>
